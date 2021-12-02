@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import axios from 'axios';
 
-function GenresUpdate() {
+function EditarGenero() {
     const [name, setName] = React.useState('');
     const navigate = useNavigate();
     const params = useParams();
@@ -12,7 +12,7 @@ function GenresUpdate() {
     React.useEffect(() => {
         axios.get('/api/genres/' + params.id)
             .then(res => setName(res.data.name))
-    }, []);
+    }, [params.id]);
 
     const onChange = (evt) =>
         setName(evt.target.value);
@@ -53,4 +53,4 @@ function GenresUpdate() {
     )
 }
 
-export default GenresUpdate;
+export default EditarGenero;

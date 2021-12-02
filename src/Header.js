@@ -10,7 +10,8 @@ import {
     Nav,
     NavItem,
     NavLink,
-    NavbarToggler
+    NavbarToggler,
+    Container
 } from 'reactstrap';
 
 function Header() {
@@ -20,23 +21,30 @@ function Header() {
         setIsOpen((oldState) => !oldState);
 
     return (
-        <>
-            <Navbar className="px-4" color="light" light expand="md">
-                <NavbarBrand tag={Link} to="/" >
-                    Minhas Séries
-                </NavbarBrand>
-                <NavbarToggler onClick={toggleNav} />
-                <Collapse navbar isOpen={isOpen}>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink tag={Link} to="/generos">
-                                Gêneros
-                            </NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-        </>
+        <header className="bg-light">
+            <Container>
+                <Navbar color="light" light expand="md">
+                    <NavbarBrand tag={Link} to="/" >
+                        Minhas Séries
+                    </NavbarBrand>
+                    <NavbarToggler onClick={toggleNav} />
+                    <Collapse navbar isOpen={isOpen}>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink tag={Link} to="/generos">
+                                    Gêneros
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag={Link} to="/series">
+                                    Séries
+                                </NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                </Navbar>
+            </Container>
+        </header>
     );
 }
 

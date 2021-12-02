@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
-function Genres() {
+function Series() {
     const [data, setData] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
 
     React.useEffect(() => {
         setLoading(true);
-        axios.get('/api/genres')
+        axios.get('/api/series')
             .then(resp => {
                 setData(resp.data.data);
                 setLoading(false);
@@ -19,7 +19,7 @@ function Genres() {
     }, []);
 
     const deleteGenre = (id) => {
-        axios.delete('/api/genres/' + id)
+        axios.delete('/api/series/' + id)
             .then(res => {
                 const newData = data.filter(d => d.id !== id);
                 setData(newData);
@@ -32,7 +32,7 @@ function Genres() {
             <td>{record.name}</td>
             <td>
                 <button className="btn btn-danger mx-1" onClick={() => deleteGenre(record.id)}>Remover</button>
-                <Link className="btn btn-info mx-1" to={'/generos/editar/' + record.id}>Editar</Link>
+                <Link className="btn btn-info mx-1" to={'/series/' + record.id}>Info</Link>
             </td>
         </tr>
     }
@@ -50,10 +50,10 @@ function Genres() {
     if (data.length === 0) {
         return (
             <section className="container">
-                <h1>Gêneros</h1>
-                <Link className="btn btn-outline-primary" to={'/generos/novo'}>Novo</Link>
+                <h1>Séries</h1>
+                <Link className="btn btn-outline-primary" to={'/series/novo'}>Novo</Link>
                 <div className="alert alert-warning" role="alert">
-                    Você não possui gêneros criados.
+                    Você não possui séries cadastradas.
                 </div>
             </section>
         )
@@ -61,8 +61,8 @@ function Genres() {
 
     return (
         <section className="container">
-            <h1>Gêneros</h1>
-            <Link className="btn btn-outline-primary" to={'/generos/novo'}>Novo</Link>
+            <h1>Séries</h1>
+            <Link className="btn btn-outline-primary" to={'/series/novo'}>Novo</Link>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -79,4 +79,4 @@ function Genres() {
     )
 }
 
-export default Genres;
+export default Series;

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios';
 
-function NewGenre() {
+function NovoGenero() {
     const [name, setName] = React.useState('');
     const navigate = useNavigate();
 
@@ -47,4 +47,4 @@ function NewGenre() {
     )
 }
 
-export default NewGenre;
+export default NovoGenero;

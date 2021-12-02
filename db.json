@@ -1,12 +1,37 @@
 {
   "series": {
-    "1": {
-      "name": "La casa de papel",
-      "status": "WATCHED",
+    "1638414824118": {
+      "name": "House of Cards",
+      "genre_id": 1638468488108,
+      "poster": "//image.tmdb.org/t/p/original/hKWxWjFwnMvkWQawbhvC0Y7ygQ8.jpg",
+      "background": "//image.tmdb.org/t/p/original/ex4kvQb0Ski5KL2fsnKQU2hV3oo.jpg"
+    },
+    "1638467129737": {
+      "name": "La Casa de Papel",
+      "status": "PARA_ASSISTIR",
       "genre_id": 1,
-      "comments": "",
       "poster": "//image.tmdb.org/t/p/original/yVUAfbrP5HDJugXraB7KQS0yz6Z.jpg",
-      "background": "//image.tmdb.org/t/p/original/piuRhGiQBYWgW668eSNJ2ug5uAO.jpg"
+      "background": "//image.tmdb.org/t/p/original/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg"
+    },
+    "1638474888629": {
+      "name": "The 100",
+      "status": "ASSISTIDO",
+      "genre_id": 1638474927285,
+      "poster": "//image.tmdb.org/t/p/original/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg",
+      "background": "//image.tmdb.org/t/p/original/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg"
+    },
+    "1638478344212": {
+      "name": "Flash",
+      "status": "PARA_ASSISTIR",
+      "genre_id": 1,
+      "poster": "//image.tmdb.org/t/p/original/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
+      "background": "//image.tmdb.org/t/p/original/41yaWnIT8AjIHiULHtTbKNzZTjc.jpg"
+    },
+    "1638478565102": {
+      "name": "Lost",
+      "genre_id": "1",
+      "poster": "//image.tmdb.org/t/p/original/29qdZsx68Oakn1Kirkxob2Qn8w9.jpg",
+      "background": "//image.tmdb.org/t/p/original/12NEw3eBUQxK9qdgtegZRsz4Yp8.jpg"
     }
   },
   "genres": {
@@ -16,8 +41,11 @@
     "2": {
       "name": "Comédia"
     },
-    "1638372779916": {
-      "name": "Aventua"
+    "1638468488108": {
+      "name": "Drama Político "
+    },
+    "1638474927285": {
+      "name": "Ficção"
     }
   },
   "count": 0

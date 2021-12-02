@@ -14,11 +14,14 @@
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "reactstrap": "^9.0.1",
+    "run-all": "^1.0.1",
     "web-vitals": "^1.0.1"
   },
   "proxy": "http://localhost:3002",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all build start-server",
+    "start-react": "react-scripts start",
+    "start-server": "node ./node_modules/minhas-series-server/index",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
